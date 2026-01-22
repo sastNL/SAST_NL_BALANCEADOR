@@ -1,12 +1,12 @@
 import pandas as pd
 
-from Preprocesamiento.Dinamico.LimpiezaDistribucion import limpieza_datos_distribucion
-from Preprocesamiento.Dinamico.LimpiezaForecast import algoritmo_limpieza_forecast
-from Preprocesamiento.Dinamico.LimpiezaCostosProduccion import limpieza_costos_produccion
-from Preprocesamiento.Dinamico.LimpiezaTurnosVelocidades import limpieza_turnos_velocidades
-from Preprocesamiento.Dinamico.LimpiezaInventario import limpieza_inventario_inicial
-from Preprocesamiento.Dinamico.LimpiezaOrdenesAbiertas import limpieza_ordenes_abiertas
-from Preprocesamiento.Dinamico.LimpiezaConsignacionDinamica import limpieza_stock_cliente_consignacion
+from utils_asignacion.utils_asignacion_back.Preprocesamiento.Dinamico.LimpiezaDistribucion import limpieza_datos_distribucion
+from utils_asignacion.utils_asignacion_back.Preprocesamiento.Dinamico.LimpiezaForecast import algoritmo_limpieza_forecast
+from utils_asignacion.utils_asignacion_back.Preprocesamiento.Dinamico.LimpiezaCostosProduccion import limpieza_costos_produccion
+from utils_asignacion.utils_asignacion_back.Preprocesamiento.Dinamico.LimpiezaTurnosVelocidades import limpieza_turnos_velocidades
+from utils_asignacion.utils_asignacion_back.Preprocesamiento.Dinamico.LimpiezaInventario import limpieza_inventario_inicial
+from utils_asignacion.utils_asignacion_back.Preprocesamiento.Dinamico.LimpiezaOrdenesAbiertas import limpieza_ordenes_abiertas
+from utils_asignacion.utils_asignacion_back.Preprocesamiento.Dinamico.LimpiezaConsignacionDinamica import limpieza_stock_cliente_consignacion
 
 def limpieza_datos(nombre_corrida, mes_inicio, año_inicio, mes_fin, año_fin):
 
@@ -33,3 +33,4 @@ def limpieza_datos(nombre_corrida, mes_inicio, año_inicio, mes_fin, año_fin):
     
     limpieza_stock_cliente_consignacion(nombre_corrida)
     print('Ejecución exitosa de limpieza de stock cliente consignación')
+
