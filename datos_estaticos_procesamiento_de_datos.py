@@ -9,7 +9,6 @@ from utils_asignacion.utils_asignacion_back.Preprocesamiento.Estatico.LimpiezaCl
 
 def PreprocesarDatosEstaticos():
     
-    # Inicializar session_state
     if "datos_estaticos_procesados" not in st.session_state:
         st.session_state["datos_estaticos_procesados"] = False
 
@@ -56,4 +55,5 @@ def PreprocesarDatosEstaticos():
                         file_name=f"{nombre}.xlsx",
                         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
                         key=f"descargar_{nombre.lower()}"
+
                     )
