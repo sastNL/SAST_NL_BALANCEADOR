@@ -1,6 +1,6 @@
-from Postprocesamiento.export_model import export_model_results
-from Postprocesamiento.graficos_output import heatmap_produccion, heatmap_utilizacion, heatmap_produccion_planta, grafico_barras_asignacion_planta, heatmap_utilizacion_planta
-from Postprocesamiento.kpis import calculo_kpis
+from utils_asignacion.utils_asignacion_back.Postprocesamiento.export_model import export_model_results
+from utils_asignacion.utils_asignacion_back.Postprocesamiento.graficos_output import heatmap_produccion, heatmap_utilizacion, heatmap_produccion_planta, grafico_barras_asignacion_planta, heatmap_utilizacion_planta
+from utils_asignacion.utils_asignacion_back.Postprocesamiento.kpis import calculo_kpis
 
 def postprocess(modelo, nombre_archivo, nombre_corrida, inicio_horizonte):
     export_model_results(modelo, nombre_archivo, nombre_corrida)
@@ -10,5 +10,6 @@ def postprocess(modelo, nombre_archivo, nombre_corrida, inicio_horizonte):
     fig2 = grafico_barras_asignacion_planta(nombre_corrida, inicio_horizonte)
     fig3 = heatmap_utilizacion_planta(nombre_corrida, inicio_horizonte)
     reporte_kpis, costo_lineas = calculo_kpis(modelo)
+
 
     return reporte_kpis, costo_lineas, fig_produccion_x_linea, fig_utilizacion_x_linea, fig1, fig2, fig3
